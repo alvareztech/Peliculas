@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Peliculas</string>
+    <string name="actores">Actores</string>
+    <string name="pelicula">Película</string>
 </resources>

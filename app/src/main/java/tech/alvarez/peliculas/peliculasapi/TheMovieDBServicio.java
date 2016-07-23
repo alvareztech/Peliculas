@@ -4,6 +4,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import tech.alvarez.peliculas.models.ActoresRespuesta;
 import tech.alvarez.peliculas.models.CarteleraRespuesta;
 import tech.alvarez.peliculas.models.PeliculaDetalle;
 
@@ -18,4 +19,7 @@ public interface TheMovieDBServicio {
 
     @GET("movie/{ide}")
     Call<PeliculaDetalle> obtenerInfoPelicula( @Path("ide") String id, @Query("api_key") String apiKey);
+
+    @GET("movie/{idpeli}/credits")
+    Call<ActoresRespuesta> obtenerActores(@Path("idpeli") String idPelicula, @Query("api_key") String apiKey);
 }
