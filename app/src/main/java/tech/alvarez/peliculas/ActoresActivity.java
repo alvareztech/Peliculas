@@ -45,6 +45,8 @@ public class ActoresActivity extends AppCompatActivity implements ItemClickActor
         actoresAdapter = new ActoresAdapter(this, this);
         actoresRecyclerView.setAdapter(actoresAdapter);
 
+
+
         idPeli = getIntent().getStringExtra("idPeli");
 
         Retrofit retrofit = new Retrofit.Builder()
